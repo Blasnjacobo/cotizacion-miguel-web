@@ -1,7 +1,29 @@
 {
   "files": [],
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "types": ["jest", "@testing-library/jest-dom", "node"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "baseUrl": "./src",
+    "paths": {
+      "@assets/*": ["lib/assets/*"],
+      "@components/*": ["lib/components/*"],
+      "@providers/*": ["lib/providers/*"],
+      "@styles/*": ["lib/styles/*"],
+      "@models/*": ["lib/models/*"],
+      "@utils/*": ["lib/utils/*"],
+      "@pages/*": ["src/pages/*"],
+      "@local/*": ["src/local/*"],
+      "@hooks/*": ["lib/hooks/*"],
+    },
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
 }

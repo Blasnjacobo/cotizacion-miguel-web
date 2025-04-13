@@ -1,0 +1,8 @@
+.Cotizacion {
+  height: 100%;
+  &Page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  } 
+}

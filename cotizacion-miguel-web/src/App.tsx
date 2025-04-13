@@ -1,6 +1,11 @@
+import { Navbar } from "./components"
+import "./App.scss"
+
 const App = () => {
   return (
-    <div>App Mayco</div>
+    <main className="CotizacionPage">
+      <Navbar />
+    </main>
   )
 }
 
