@@ -1,8 +1,36 @@
+.Page {
+  height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &__content {
+    height: 100%;
+  } 
+
+  .p-accordion{
+    height: 100%;
+      .p-accordion-header {
+        font-size: 1.5rem;
+        padding: 1rem 0;
+        background-color: aliceblue;
+        .Page__content__header {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          p {
+            margin: 0;
+          }
+        }
+        a {
+          color: black;
+          padding: 0 1rem;
+          display: flex;
+          gap: 2rem;
+        }
+      }
+  }
+}
+
 .Cotizacion {
   height: 100%;
-  &Page {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  } 
 }

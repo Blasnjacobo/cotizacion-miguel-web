@@ -1,0 +1,9 @@
+.CotizacionCard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__container {
+        max-width: 600px;
+        width: 100%;
+    }
+}

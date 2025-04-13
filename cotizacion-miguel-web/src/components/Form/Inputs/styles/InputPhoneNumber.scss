@@ -1,0 +1,19 @@
+.InputPhoneNumber {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__flag {
+        svg {
+            height: .7rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__input {
+        height: 2.66rem;
+        padding-left: 5.8rem;
+        padding-bottom: 0.6rem;
+        width: 100%;
+    }
+}

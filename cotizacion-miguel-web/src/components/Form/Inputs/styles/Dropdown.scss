@@ -1,0 +1,17 @@
+.custom-dropdown-panel {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: var(--surface-100);
+    box-shadow: none;
+    position: absolute;
+    top: 385px;
+
+    .p-dropdown-items {
+        .p-highlight {
+            background: none;
+            color: var(--black);
+            font-weight: 600;
+            border: none;
+        }
+    }
+}
