@@ -1,5 +1,5 @@
 import './Navbar.scss';
-import { Avatar, PersonOutlinedIcon, Divider } from '@components/index';
+import {  Divider } from '@components/index';
 import logo from "@assets/att-logo-black-transparent.png"
 export const Navbar = () => {
     return (
@@ -12,8 +12,8 @@ export const Navbar = () => {
                             </section>
                     <section className='Navbar__actions'>
                         <section className='Navbar__account'>
-                            <section className='flex gap-1 cursor-pointer align-items-center text-center'>
-                                <p className='m-0 p-0'><span>Miguel Angel </span>- Sucursal La Canasta</p>
+                            <section className='flex gap-1 cursor-pointer align-items-center'>
+                                <p className='m-0 p-0' style={{ textAlign: "center"}}><span>Miguel Angel </span>- Sucursal La Canasta</p>
                             </section>
                         </section>
                 </section>
