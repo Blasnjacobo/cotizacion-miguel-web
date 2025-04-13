@@ -108,28 +108,6 @@ export const InputNumber = <T extends FieldValues>({
               field.onChange(e.value);
               onChange?.(e);
             }}
-            onBlur={(e) => {
-              field.onBlur();
-
-              // only removes characters that are not numbers or decimal points if decimals are allowed
-              let valueClean;
-              if (allowDecimals) {
-                valueClean = e.target.value.replace(/[^\d.]/g, '');
-                const parts = valueClean.split('.');
-                if (parts.length > 2) {
-                  valueClean = parts[0] + '.' + parts.slice(1).join('');
-                }
-              } else {
-                valueClean = e.target.value.replace(/[^\d]/g, '');
-              }
-
-              // set the cleaned value
-              field.onChange(valueClean === '' ? null : Number(valueClean));
-              setValue(valueClean === '' ? 0 : Number(valueClean));
-
-
-              onBlur?.(e);
-            }}
             className={classNames('w-full', inputNumberProps.className)}
             inputClassName={classNames('w-full', inputNumberProps.inputClassName)}
           />

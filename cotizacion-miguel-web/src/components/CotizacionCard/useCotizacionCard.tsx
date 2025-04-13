@@ -42,12 +42,28 @@ export const useCotizacionCard = () => {
     setTimeout(() => {
       setAllValuesCotizacion({
         plazo: 24,
+        plan: 0
       });
     }, 1000);
   }, []);
 
-  console.log(hookCotizacion)
+  const precio = Number(hookCotizacion.getValues("precio") ?? 0);
+  const porcentajeInicial = Number(hookCotizacion.getValues("porcentajeInicial") ?? 0);
+  const plazo = Number(hookCotizacion.getValues("plazo") ?? 1); // default to 1 to avoid division by zero
+  const plan = Number(hookCotizacion.getValues("plan") ?? 0);
+  const control = Number(hookCotizacion.getValues("control") ?? 0);
+  
+  const pagoInicial = precio * 0.01 * porcentajeInicial;
+  const pagoEquipo = (precio - pagoInicial) / plazo;
+  const mensualidad = plan + pagoEquipo + control;
+  const portabilidad = (plan * 0.8) + pagoEquipo + control;
+
   return {
-    FormCotizacion
+    FormCotizacion,
+    hookCotizacion,
+    pagoInicial,
+    pagoEquipo,
+    mensualidad,
+    portabilidad
   }
 }

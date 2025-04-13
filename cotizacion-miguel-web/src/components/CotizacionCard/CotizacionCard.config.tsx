@@ -5,10 +5,50 @@ export const configFormCotizacion = ({
   optionsPlazo = [],
 }: IOptionsFormCotizacion) =>
   ({
+    plan: {
+        type: 'number',
+        label: 'Plan',
+        name: 'plan',
+        props: {
+            placeholder: 'Insertar cantidad',
+            mode: "currency",
+            currency: "USD" ,
+          }
+    },
+    precio: {
+        type: 'number',
+        label: 'Precio',
+        name: 'precio',
+        props: {
+            placeholder: 'Insertar cantidad',
+            mode: "currency",
+            currency: "USD" ,
+          }
+    },
+    porcentajeInicial: {
+        type: 'number',
+        label: 'Porcentaje inicial de pago',
+        name: 'porcentajeInicial',
+        props: {
+            placeholder: 'Insertar cantidad a iniciar',
+            suffix:" %"
+          }
+    },
     plazo: {
       type: 'select',
       label: 'Plazo',
       name: 'plazo',
       options: optionsPlazo,
+    },
+    control: {
+        type: 'number',
+        label: 'Control',
+        name: 'control',
+        props: {
+            placeholder: 'Insertar cantidad',
+            mode: "currency",
+            currency: "USD" ,
+            classNameRoot: "Cotizacion__control"
+          }
     },
     } as ConfigForm<IFormCotizacion>);

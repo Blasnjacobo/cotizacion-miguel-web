@@ -1,9 +1,10 @@
 .Footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     background-color: #067AB4;
     color: white;
     font-family: emoji;
-    font-size: x-large;
+    font-size: large;
+    padding: 0 1rem;
 }
