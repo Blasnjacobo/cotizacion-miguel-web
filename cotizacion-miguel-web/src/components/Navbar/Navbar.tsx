@@ -1,5 +1,5 @@
 import './Navbar.scss';
-import {  Divider } from '@components/index';
+import { Divider } from '../index';
 import logo from "@assets/att-logo-black-transparent.png"
 export const Navbar = () => {
     return (

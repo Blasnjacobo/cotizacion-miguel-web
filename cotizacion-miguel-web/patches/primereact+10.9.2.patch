@@ -1,0 +1,65 @@
+diff --git a/node_modules/primereact/fieldset/fieldset.d.ts b/node_modules/primereact/fieldset/fieldset.d.ts
+index 3e54fa1..3e9e08b 100644
+--- a/node_modules/primereact/fieldset/fieldset.d.ts
++++ b/node_modules/primereact/fieldset/fieldset.d.ts
+@@ -115,7 +115,7 @@ interface FieldsetToggleEvent {
+  * Defines valid properties in Fieldset component. In addition to these, all properties of HTMLFieldSetElement can be used in this component.
+  * @group Properties
+  */
+-export interface FieldsetProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLFieldSetElement>, HTMLFieldSetElement>, 'ref'> {
++export interface FieldsetProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLFieldSetElement>, HTMLFieldSetElement>,  'onToggle' | 'ref'> {
+     /**
+      * Header text of the fieldset.
+      */
+diff --git a/node_modules/primereact/inplace/inplace.d.ts b/node_modules/primereact/inplace/inplace.d.ts
+index c03cdbe..710d531 100644
+--- a/node_modules/primereact/inplace/inplace.d.ts
++++ b/node_modules/primereact/inplace/inplace.d.ts
+@@ -89,7 +89,7 @@ interface InplaceToggleEvent {
+  * Defines valid properties in Inplace component. In addition to these, all properties of HTMLDivElement can be used in this component.
+  * @group Properties
+  */
+-export interface InplaceProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'ref'> {
++export interface InplaceProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,  'onToggle' | 'ref'> {
+     /**
+      * Whether the content is displayed or not. To use in controlled mode you must implement `onToggle` callback at a minimum.
+      * @defaultValue false
+diff --git a/node_modules/primereact/panel/panel.d.ts b/node_modules/primereact/panel/panel.d.ts
+index 3d748fd..8e4147b 100644
+--- a/node_modules/primereact/panel/panel.d.ts
++++ b/node_modules/primereact/panel/panel.d.ts
+@@ -184,7 +184,7 @@ export interface PanelState {
+  * Defines valid properties in Panel component. In addition to these, all properties of HTMLDivElement can be used in this component.
+  * @group Properties
+  */
+-export interface PanelProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'ref'> {
++export interface PanelProps extends Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,  'onToggle' | 'ref'> {
+     /**
+      * Custom header template of the panel.
+      */
+diff --git a/node_modules/primereact/treeselect/treeselect.d.ts b/node_modules/primereact/treeselect/treeselect.d.ts
+index e81b2bb..32d42b2 100644
+--- a/node_modules/primereact/treeselect/treeselect.d.ts
++++ b/node_modules/primereact/treeselect/treeselect.d.ts
+@@ -363,7 +363,7 @@ interface TreeSelectFilterOptions {
+  * Defines valid properties in TreeSelect component. In addition to these, all properties of HTMLDivElement can be used in this component.
+  * @group Properties
+  */
+-export interface TreeSelectProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'onChange' | 'value' | 'ref' | 'pt'> {
++export interface TreeSelectProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLDivElement>, HTMLDivElement>,  'onToggle' | 'onChange' | 'value' | 'ref' | 'pt'> {
+     /**
+      * DOM element instance where the overlay panel should be mounted. Valid values are any DOM Element and 'self'. The self value is used to render a component where it is located.
+      * @defaultValue document.body
+diff --git a/node_modules/primereact/treetable/treetable.d.ts b/node_modules/primereact/treetable/treetable.d.ts
+index 0dd00bc..72549be 100644
+--- a/node_modules/primereact/treetable/treetable.d.ts
++++ b/node_modules/primereact/treetable/treetable.d.ts
+@@ -580,7 +580,7 @@ interface TreeTableColReorderEvent {
+  * Defines valid properties in TreeTable component. In addition to these, all properties of HTMLDivElement can be used in this component.
+  * @group Properties
+  */
+-export interface TreeTableProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'size' | 'onContextMenu' | 'onSelect' | 'ref' | 'value'> {
++export interface TreeTableProps extends Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLDivElement>, HTMLDivElement>,  'onToggle' | 'size' | 'onContextMenu' | 'onSelect' | 'ref' | 'value'> {
+     /**
+      * Whether to show it even there is only one page.
+      * @defaultValue true
