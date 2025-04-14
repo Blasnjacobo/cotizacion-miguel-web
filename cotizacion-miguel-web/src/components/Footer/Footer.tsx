@@ -2,8 +2,13 @@ import "./Footer.scss";
 export const Footer = () => {
   return (
     <section className="Footer">
-        <p>Mn5007@primecommsmx.com</p>
-        <p>Tel: 6675444333</p>
+      <section className="Footer__content">
+        <p className="m-0">2Mn5007@primecommsmx.com</p>
+      </section>
+      <section className="Footer__content">
+        <i className="pi pi-phone"></i>
+        <p className="m-0">6675444333</p>
+      </section>
     </section>
   )
 }
