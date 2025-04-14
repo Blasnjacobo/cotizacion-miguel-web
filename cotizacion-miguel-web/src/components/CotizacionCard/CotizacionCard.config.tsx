@@ -13,6 +13,7 @@ export const configFormCotizacion = ({
             placeholder: 'Insertar cantidad',
             mode: "currency",
             currency: "USD" ,
+            min: 0
           }
     },
     precio: {
@@ -23,6 +24,7 @@ export const configFormCotizacion = ({
             placeholder: 'Insertar cantidad',
             mode: "currency",
             currency: "USD" ,
+            min:0
           }
     },
     porcentajeInicial: {
@@ -31,7 +33,9 @@ export const configFormCotizacion = ({
         name: 'porcentajeInicial',
         props: {
             placeholder: 'Insertar cantidad a iniciar',
-            suffix:" %"
+            suffix:" %",
+            max: 100,
+            min: 0
           }
     },
     plazo: {
@@ -48,7 +52,8 @@ export const configFormCotizacion = ({
             placeholder: 'Insertar cantidad',
             mode: "currency",
             currency: "USD" ,
-            classNameRoot: "Cotizacion__control"
+            classNameRoot: "Cotizacion__control",
+            min:0
           }
     },
     } as ConfigForm<IFormCotizacion>);

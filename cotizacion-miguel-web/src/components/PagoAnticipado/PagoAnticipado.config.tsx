@@ -13,6 +13,7 @@ export const configFormPagoAnticipado = ({
             placeholder: 'Insertar cantidad',
             mode: "currency",
             currency: "USD" ,
+            min: 0
           }
     },
     pagoInicial: {
@@ -23,6 +24,7 @@ export const configFormPagoAnticipado = ({
             placeholder: 'Insertar cantidad',
             mode: "currency",
             currency: "USD" ,
+            min: 0
           }
     },
     plazo: {
@@ -37,6 +39,7 @@ export const configFormPagoAnticipado = ({
         name: 'mesesPagando',
         props: {
             placeholder: 'Insertar cantidad',
+            min: 0
           }
     },
     } as ConfigForm<IFormPagoAnticipado>);
